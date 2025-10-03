@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
 import EventCard from './components/subcomponents/EventCard'
 export default function EventsNew() {
   return (
-    <div className='flex flex-row justify-start  items-center '>
+    <div className='flex flex-row justify-start  bg-[#f5f0e6] items-center '>
           <div className={`flex flex-col flex-wrap ml-12 w-2/5 h-full items-start justify-center pb-10`}>
             <h2 className={`text-5xl xl:text-7xl ml-6 mt-30 font-bold font-cormorant-garamond text-[#4b0e1e]`}>Events</h2>
             <p className={`text-xl xl:text-2xl ml-6 w-2/3 xl:w-1/2 mt-6 font-raleway text-black`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
