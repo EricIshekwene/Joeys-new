@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Doto';
+  src: url('./assets/fonts/Doto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cormorant-Garamond';
+  src: url('./assets/fonts/Cormorant_Garamond/CormorantGaramond-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf');
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-doto: 'Doto', sans-serif;
+  --font-cormorant-garamond: 'Cormorant-Garamond', serif;
+  --font-raleway: 'Raleway', sans-serif;
+}
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+}
+
+
