@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import giveback1 from './assets/background/DSC07692.jpg'
 import giveback2 from './assets/background/giveback2.jpg'
 
-export default function HowWeGiveBack() {
+export default function HowWeGiveBack({ howWeGiveBack_subtext }) {
   const isLarge = useIsLarge();
 
   function useIsLarge() {
@@ -33,9 +33,8 @@ export default function HowWeGiveBack() {
               How We Give Back
             </h2>
             <p className="text-white w-2/3 lg:w-1/3 text-sm lg:text-lg xl:text-xl font-raleway leading-relaxed">
-              We’re proud to partner with local charities and community organizations. 
-              Every month, a portion of our proceeds supports initiatives that uplift 
-              and empower our neighbors.
+              {howWeGiveBack_subtext}
+                
             </p>
             <button className='border-1  border-white text-white font-raleway  py-2 px-4 mt-4 rounded-full hover:bg-white hover:text-[#4b0e1e] transition-all duration-300 ease-in-out'>
               Call Us to Get Involved

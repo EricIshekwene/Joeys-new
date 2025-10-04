@@ -4,7 +4,7 @@ import food2 from './assets/background/DSC07658.jpg'
 import food3 from './assets/background/DSC07692.jpg'
 import food4 from './assets/background/DSC_0563.jpg'
 import food5 from './assets/srcimages/DSC_0573.jpg'
-export default function ViewMenus() {
+export default function ViewMenus({ menus_h1, menu_pdf }) {
   const images = [food1, food2, food3, food4, food5  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function ViewMenus() {
       ))}
       <div className="relative z-10 flex flex-col justify-center items-center w-full">
         <p className='text-2xl lg:text-4xl md:text-3xl sm:text-2xl xl:text-6xl font-raleway font-bold text-center text-white mb-4'>
-          Eat and Drink to your heart's content
+          {menus_h1}
         </p>
     <button className='border-2 border-white text-white font-raleway font-bold py-2 px-4 mt-4 rounded-full hover:bg-white hover:text-[#4b0e1e] transition-all duration-300 ease-in-out'>View Menus</button>
   </div>

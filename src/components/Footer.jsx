@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import logo from '../assets/logo/logo_colored.png'
 
-export default function Footer() {
-  const isLarge = useIsLarge();
+export default function Footer({ phone, instagram, tiktok, facebook, email }) {
+  const address = "2333 N High St, Columbus, OH";
+    const isLarge = useIsLarge();
 
   function useIsLarge() {
     const [isLarge, setIsLarge] = useState(window.innerWidth >= 930);
@@ -23,9 +24,9 @@ export default function Footer() {
           {/* Logo & Info */}
           <div>
             <img src={logo} alt="Restaurant Logo" className="h-12 mb-4" />
-            <p className="text-sm">2333 N High St, Columbus, OH</p>
-            <p className="text-sm">Call: (614) 429-3524</p>
-            <p className="text-sm">info@joeysplace.com</p>
+            <p className="text-sm">{address}</p>
+            <p className="text-sm">Call: {phone}</p>
+            <p className="text-sm">{email}</p>
           </div>
 
           {/* Quick Links */}
@@ -64,15 +65,15 @@ export default function Footer() {
             <h4 className="font-semibold mb-2">Follow Us</h4>
             <div className='flex flex-row gap-3'>
               <FaInstagram 
-                onClick={() => window.open('https://www.instagram.com/joeysplace/')} 
+                onClick={() => window.open(instagram)} 
                 className="cursor-pointer text-xl hover:scale-150 transition-transform duration-300" 
               />
               <FaFacebook 
-                onClick={() => window.open('https://www.facebook.com/joeysplace/')} 
+                onClick={() => window.open(facebook)} 
                 className="cursor-pointer text-xl hover:scale-150 transition-transform duration-300" 
               />
               <FaTiktok 
-                onClick={() => window.open('https://www.tiktok.com/@joeysplace/')} 
+                onClick={() => window.open(tiktok)} 
                 className="cursor-pointer text-xl hover:scale-150 transition-transform duration-300" 
               />
             </div>
@@ -84,9 +85,9 @@ export default function Footer() {
       {!isLarge && (
         <div className="flex flex-col items-center text-center px-6 py-10 space-y-6">
           <img src={logo} alt="Restaurant Logo" className="h-12 mb-2" />
-          <p className="text-sm">2333 N High St, Columbus, OH</p>
-          <p className="text-sm">Call: (614) 429-3524</p>
-          <p className="text-sm">info@joeysplace.com</p>
+          <p className="text-sm">{address}</p>
+          <p className="text-sm">Call: {phone}</p>
+          <p className="text-sm">{email}</p>
 
           <div>
             <h4 className="font-semibold mb-2">Quick Links</h4>
@@ -122,15 +123,15 @@ export default function Footer() {
             <h4 className="font-semibold mb-2">Follow Us</h4>
             <div className="flex flex-row gap-4 justify-center">
               <FaInstagram 
-                onClick={() => window.open('https://www.instagram.com/joeysplace/')} 
+                onClick={() => window.open(instagram)} 
                 className="cursor-pointer text-xl hover:scale-125 transition-transform duration-300" 
               />
               <FaFacebook 
-                onClick={() => window.open('https://www.facebook.com/joeysplace/')} 
+                onClick={() => window.open(facebook)} 
                 className="cursor-pointer text-xl hover:scale-125 transition-transform duration-300" 
               />
               <FaTiktok 
-                onClick={() => window.open('https://www.tiktok.com/@joeysplace/')} 
+                onClick={() => window.open(tiktok)} 
                 className="cursor-pointer text-xl hover:scale-125 transition-transform duration-300" 
               />
             </div>

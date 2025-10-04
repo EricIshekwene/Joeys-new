@@ -4,7 +4,7 @@ import event2 from '../../assets/srcimages/events2.jpg'
 import event3 from '../../assets/srcimages/event3.jpg'
 import event4 from '../../assets/srcimages/event4.jpg'
 
-export default function SmallEventCard({ className = "" }) {
+export default function SmallEventCard({ className = "", event_name, event_subtext, event_time }) {
   const images = [event1, event2, event3, event4];
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
@@ -22,17 +22,17 @@ export default function SmallEventCard({ className = "" }) {
       {/* Content */}
       <div className="p-3">
         <h5 className="text-md font-bold text-[#f5f0e6] font-cormorant-garamond mb-1">
-          Event Name
+          {event_name}
         </h5>
         <p className="text-[#f5f0e6] h-16 overflow-hidden text-xs font-raleway leading-snug">
-          Short preview text for the event. Keep it concise but enough to catch interest.
+          {event_subtext}
         </p>
       </div>
 
       {/* Button / Time */}
       <div className="px-3 pb-4">
         <button className="bg-[#f5f0e6] hover:bg-[#f5f0e6]/80 text-[#4b0e1e] font-raleway font-bold py-1 px-2 text-xs">
-          9:00 PM - 11:00 PM
+          {event_time}
         </button>
       </div>
     </div>

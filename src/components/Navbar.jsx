@@ -7,7 +7,7 @@ import NavbarDropdown from './subcomponents/NavBarDropdown'
 import text_logo from '../assets/logo/text_logo.png'
 import Joey_outside from '../assets/background/joey_outside.jpg'
 
-const Navbar = () => {
+const Navbar = ({ phone, instagram, tiktok, facebook }) => {
   const isLarge = useIsLarge();
 
   function useIsLarge() {
@@ -21,38 +21,13 @@ const Navbar = () => {
 
     return isLarge;
   }
-  const items = [
-    {
-      label: "About",
-      bgColor: "#0D0716",
-      textColor: "#fff",
-      links: [
-        { label: "Joey's Place", ariaLabel: "About Company" },
-        { label: "How we give back", ariaLabel: "How we give back" }
-      ]
-    },
-    {
-      label: "Menu",
-      bgColor: "#170D27",
-      textColor: "#fff",
-      links: [
-        { label: "Food Menu", ariaLabel: "Featured Projects" },
-        { label: "Drinks Menu", ariaLabel: "Project Case Studies" }
-      ]
-    },
-    {
-      label: "Contact",
-      bgColor: "#271E37",
-      textColor: "#fff",
-      links: [
-        { label: "Email", ariaLabel: "Email us" },
-        { label: "Phone", ariaLabel: "Phone" },
-        { label: "Facebook", ariaLabel: "Facebook" },
-        { label: "Instagram", ariaLabel: "Instagram" },
-        { label: "Tiktok", ariaLabel: "Tiktok" }
-      ]
-    }
-  ];
+  const formatPhone = (phone) => {
+    if (!phone) return ""; // fallback if phone is undefined/null
+    return phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+  };
+  
+ 
+  
   return (
     <>
       {isLarge && (
@@ -69,9 +44,9 @@ const Navbar = () => {
                   <img src={logo} alt="logo" className="w-1/5  hover:scale-110 transition-transform duration-300 ease-in-out h-full" />
                 </div>
                 <div className="flex gap-4 flex-row items-end justify-end w-1/3">
-                  <FaInstagram onClick={() => window.open('https://www.instagram.com/joeysplace614/', '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
-                  <FaTiktok onClick={() => window.open('https://www.tiktok.com/@meetatjoeys', '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
-                  <FaFacebook onClick={() => window.open('https://www.facebook.com/joeysplace614', '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <FaInstagram onClick={() => window.open(instagram, '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <FaTiktok onClick={() => window.open(tiktok, '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
+                  <FaFacebook onClick={() => window.open(facebook, '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
                 </div>
               </div>
 
@@ -80,7 +55,7 @@ const Navbar = () => {
                   <img src={text_logo} alt="logo" className="w-2/5  hover:scale-110 transition-transform duration-300 ease-in-out h-full" />
                 </div>
                 <div className="flex flex-col mt-35 items-center justify-center w-full items-center p-3  hover:scale-110 transition-transform duration-300 ease-in-out">
-                  <p onClick={() => window.open('tel:6144293524')} className="text-white text-lg font-raleway">(614)-429-3524</p>
+                  <p onClick={() => window.open(`tel:${phone}`)} className="text-white text-lg font-raleway">{formatPhone(phone)}</p>
                 </div>
               </div>
             </div>
@@ -109,7 +84,7 @@ const Navbar = () => {
                   <img src={text_logo} alt="logo" className="max-w-full ml-8 max-h-full object-contain hover:scale-110 transition-transform duration-300 ease-in-out" />
                 </div>
                 <div className="flex flex-col items-center mt-25 sm:mt-10 md:mt-20 justify-center w-full p-3 hover:scale-110 transition-transform duration-300 ease-in-out">
-                  <p onClick={() => window.open('tel:6144293524')} className="text-white text-lg font-raleway cursor-pointer">(614)-429-3524</p>
+                  <p onClick={() => window.open(`tel:${phone}`)} className="text-white text-lg font-raleway cursor-pointer">{formatPhone(phone)}</p>
                 </div>
               </div>
             </div>
