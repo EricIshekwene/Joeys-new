@@ -1,11 +1,16 @@
 import React from 'react';
-
+import event1 from '../../assets/srcimages/events1.jpg'
+import event2 from '../../assets/srcimages/events2.jpg'
+import event3 from '../../assets/srcimages/event3.jpg'
+import event4 from '../../assets/srcimages/event4.jpg'
 export default function EventCard({ className = "" }) {
+  const images = [event1, event2, event3, event4]
+  const randomImage = images[Math.floor(Math.random() * images.length)]
   return (
     <div className={`w-72 h-100 bg-[#4b0e1e] shadow-md overflow-hidden ${className}`}>
       <div className="relative h-48 bg-[#f5f0e6]">
         <img
-          src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?auto=format&fit=crop&w=800&q=80"
+          src={randomImage}
           alt="card-image"
           className="w-full h-full object-cover"
         />
@@ -15,14 +20,12 @@ export default function EventCard({ className = "" }) {
           Event Name
         </h5>
         <p className="text-[#f5f0e6] h-20 overflow-hidden text-sm font-raleway">
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to "Naviglio" where you can enjoy the main
-          night life in Barcelona.
+          This is the subtext of the event, feel free to add more text here. Blackened Shrimp & Grits dinner special
         </p>
       </div>
       <div className="px-3 pb-6 mt-2">
         <button className="bg-[#f5f0e6] hover:bg-[#f5f0e6]/80 text-[#4b0e1e] font-raleway font-bold py-2 px-4 text-sm">
-          Read More
+          10:00 PM - 12:00 AM
         </button>
       </div>
     </div>

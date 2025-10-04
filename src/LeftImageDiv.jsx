@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import bar_drinks from './assets/background/bar_drinks.jpg'
 import open_live_hours from './assets/srcimages/open_live_hours.png'
 import close_live_hours from './assets/srcimages/close_live_hours.png'
-
+import outside1 from './assets/srcimages/outside1.jpg'
 export default function LeftImageDiv() {
   const [isOpen, setIsOpen] = useState(false)
   const isLarge = useIsLarge();
@@ -23,7 +23,7 @@ export default function LeftImageDiv() {
     <div className="bg-[#f5f0e6] flex flex-row h-150">
       {/* Left Image */}
       <img
-        src={bar_drinks}
+        src={outside1}
         alt="background"
         className="w-3/5 h-full object-cover"
       />
@@ -97,7 +97,7 @@ export default function LeftImageDiv() {
         <div className="bg-[#f5f0e6] flex flex-col ">
         {/* Left Image */}
         <img
-          src={bar_drinks}
+          src={outside1}
           alt="background"
           className="w-full h-full object-cover"
         />
@@ -113,7 +113,7 @@ export default function LeftImageDiv() {
   
           {/* Hours list */}
           <div className="w-full flex flex-col items-center">
-            <hr className="w-1/3 border-2 border-[#4b0e1e] mb-4 self-start ml-10 md:ml-50" />
+            <hr className="w-1/3 border-2 border-[#4b0e1e] mb-4 " />
   
             <div className="w-full flex flex-row justify-center gap-8">
               {/* Days */}
@@ -139,7 +139,7 @@ export default function LeftImageDiv() {
               </div>
             </div>
   
-            <hr className="w-1/3 border-2 border-[#4b0e1e] mt-4 self-end mr-20" />
+            <hr className="w-1/3 border-2 border-[#4b0e1e] mt-4  " />
           </div>
   
           {/* Open/Closed toggle */}

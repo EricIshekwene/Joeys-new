@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import bar_drinks from './assets/background/bar_drinks.jpg'
-import bar_background from './assets/background/bar_background.jpg'
+import food1 from './assets/background/DSC_0549.jpg'
+import food2 from './assets/background/DSC07658.jpg'
+import food3 from './assets/background/DSC07692.jpg'
+import food4 from './assets/background/DSC_0563.jpg'
+import food5 from './assets/srcimages/DSC_0573.jpg'
 export default function ViewMenus() {
-  const images = [bar_drinks, bar_background, bar_drinks];
+  const images = [food1, food2, food3, food4, food5  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 1000); 
+    }, 8000); 
     return () => clearInterval(interval);
   }, [images.length]);
 
   return (
-    <div className="flex flex-col justify-center items-center h-160 gap-10 relative overflow-hidden">
-      {images.map((img, idx) => (
-        <div
-          key={idx}
-          className="absolute inset-0 w-full h-full transition-opacity duration-3000"
-          style={{
-            backgroundImage: `url(${img})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: idx === currentIndex ? 1 : 0,
-            zIndex: 0,
-          }}
+    <div className="relative w-full flex flex-col p-4 justify-center items-center h-80 md:h-100 lg:h-120 xl:h-160 overflow-hidden">
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt="carousel"
+          className={`absolute w-full h-full object-cover transition-all duration-[1500ms] ease-in-out
+            ${index === currentIndex 
+              ? "opacity-100 blur-0" 
+              : "opacity-0 blur-xs"}`}
         />
       ))}
       <div className="relative z-10 flex flex-col justify-center items-center w-full">

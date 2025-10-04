@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import leaf_beige from '../assets/background/leaf_beige.png'
 
 export default function HeaderNew() {
   const isLarge = useIsLarge();
@@ -19,7 +19,7 @@ export default function HeaderNew() {
       {isLarge &&
        
 
-          <div className="p-10 flex flex-col items-center justify-start m-10">
+          <div className="p-10 bg-[#f5f0e6] h-120 flex flex-col items-center justify-center " style={{ backgroundImage: `url(${leaf_beige})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
 
             <div className="w-full flex flex-row items-center justify-center gap-16">
 
@@ -37,7 +37,7 @@ export default function HeaderNew() {
         }
 {
   !isLarge &&
-  <section className='bg-[#f5f0e6]'>
+  <section className='bg-[#f5f0e6]' style={{ backgroundImage: `url(${leaf_beige})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
     
 
     <div className="p-10 flex flex-col items-center justify-start">

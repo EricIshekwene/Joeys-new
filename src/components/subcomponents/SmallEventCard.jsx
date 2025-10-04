@@ -1,28 +1,38 @@
 import React from 'react';
+import event1 from '../../assets/srcimages/events1.jpg'
+import event2 from '../../assets/srcimages/events2.jpg'
+import event3 from '../../assets/srcimages/event3.jpg'
+import event4 from '../../assets/srcimages/event4.jpg'
 
 export default function SmallEventCard({ className = "" }) {
+  const images = [event1, event2, event3, event4];
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+
   return (
-    <div className={`w-40 h-70 bg-[#f5f0e6] rounded-3xl shadow-md overflow-hidden p-3 ${className}`}>
-      <div className="relative h-30 shadow-lg bg-gray-500 rounded-3xl">
+    <div className={`w-44 h-80 bg-[#4b0e1e] shadow-md overflow-hidden ${className}`}>
+      {/* Image section */}
+      <div className="relative h-28 bg-[#f5f0e6]">
         <img
-          src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?auto=format&fit=crop&w=800&q=80"
+          src={randomImage}
           alt="card-image"
-          className="w-full h-full object-cover rounded-3xl"
+          className="w-full h-full object-cover"
         />
       </div>
-      <div className="p-2 ">
-        <h5 className="text-lg font-semibold text-[#4b0e1e] font-cormorant-garamond font-bold text-lg">
+
+      {/* Content */}
+      <div className="p-3">
+        <h5 className="text-md font-bold text-[#f5f0e6] font-cormorant-garamond mb-1">
           Event Name
         </h5>
-        <p className="text-[#4b0e1e] h-15 overflow-hidden text-xs font-raleway">
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to "Naviglio" where you can enjoy the main
-          night life in Barcelona.urterswedtfyguhktyjrtcyrf
+        <p className="text-[#f5f0e6] h-16 overflow-hidden text-xs font-raleway leading-snug">
+          Short preview text for the event. Keep it concise but enough to catch interest.
         </p>
       </div>
-      <div className="px-2 pb-2 mt-2">
-        <button className="bg-[#4b0e1e] hover:bg-[#4b0e1e]/80 text-[#f5f0e6] font-raleway font-bold py-1 px-2 rounded-lg text-xs">
-          Read More
+
+      {/* Button / Time */}
+      <div className="px-3 pb-4">
+        <button className="bg-[#f5f0e6] hover:bg-[#f5f0e6]/80 text-[#4b0e1e] font-raleway font-bold py-1 px-2 text-xs">
+          9:00 PM - 11:00 PM
         </button>
       </div>
     </div>

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className=" bg-white">
+      <div className=" bg-[#f5f0e6]">
 
         <Navbar />
        
@@ -22,9 +22,12 @@ function App() {
         <ViewMenus />
         <LeftImageDiv />
         <Contents />
-        <EventsNew />       
+        <div className=''>
+        <EventsNew /> 
+        </div>     
+        <RightImageDiv />     
         <Joeys />
-          <RightImageDiv />    
+        
         <Footer />
        
       </div>

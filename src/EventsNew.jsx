@@ -1,26 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
 import EventCard from './components/subcomponents/EventCard'
+
+import bar_drinks from './assets/background/bar_drinks.jpg'
+import SmallEventCard from './components/subcomponents/SmallEventCard'
 export default function EventsNew() {
+  const isLarge = useIsLarge();
+  function useIsLarge() {
+    const [isLarge, setIsLarge] = useState(window.innerWidth >= 1000);
+    useEffect(() => {
+      const handleResize = () => setIsLarge(window.innerWidth >= 1000);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return isLarge;
+  }
   return (
-    <div className='flex flex-row justify-start hidden bg-[#f5f0e6] items-center '>
-          <div className={`flex flex-col flex-wrap ml-12 w-2/5 h-full items-start justify-center pb-10`}>
-            <h2 className={`text-5xl xl:text-7xl ml-6 mt-30 font-bold font-cormorant-garamond text-[#4b0e1e]`}>Events</h2>
-            <p className={`text-xl xl:text-2xl ml-6 w-2/3 xl:w-1/2 mt-6 font-raleway text-black`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-            <p className={`text-md xl:text-lg ml-6 w-2/3 xl:w-1/2 mt-6 font-raleway text-black`}>Follow Our Socials to stay updated</p>
+    <>
+    {isLarge && (
+    <div
+      className='flex flex-row justify-start bg-[#f5f0e6] items-center relative'
+      style={{
+        backgroundImage: `url(${bar_drinks})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      {/* Overlay to darken the background */}
+      <div className="absolute inset-0 bg-black/50 pointer-events-none z-0"></div>
+      <div className={`flex flex-col flex-wrap ml-12 w-2/5 h-full items-start justify-center pb-10 z-10`}>
+            <h2 className={`text-5xl xl:text-7xl ml-6 mt-30 font-bold font-cormorant-garamond text-[#f5f0e6]`}>Events</h2>
+            
+                  <p className={`text-xl xl:text-2xl ml-6 w-2/3 xl:w-1/2 mt-6 font-raleway text-[#f5f0e6]`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+            <p className={`text-md xl:text-lg ml-6 w-2/3 xl:w-1/2 mt-6 font-raleway text-[#f5f0e6]`}>Follow Our Socials to stay updated</p>
             <div className={`flex flex-row ml-6 gap-6 mt-6`}>
-              <FaInstagram onClick={() => window.open('https://www.instagram.com/joeysplace/')} className="text-2xl xl:text-4xl text-[#4b0e1e] hover:scale-150 transition-transform duration-300 ease-in-out" />
-              <FaFacebook onClick={() => window.open('https://www.facebook.com/joeysplace/')} className="text-2xl xl:text-4xl text-[#4b0e1e] hover:scale-150 transition-transform duration-300 ease-in-out" />
-              <FaTiktok onClick={() => window.open('https://www.tiktok.com/@joeysplace/')} className="text-2xl xl:text-4xl text-[#4b0e1e] hover:scale-150 transition-transform duration-300 ease-in-out" /></div>
+              <FaInstagram onClick={() => window.open('https://www.instagram.com/joeysplace/')} className="text-2xl xl:text-4xl text-[#f5f0e6] hover:scale-150 transition-transform duration-300 ease-in-out" />
+              <FaFacebook onClick={() => window.open('https://www.facebook.com/joeysplace/')} className="text-2xl xl:text-4xl text-[#f5f0e6] hover:scale-150 transition-transform duration-300 ease-in-out" />
+              <FaTiktok onClick={() => window.open('https://www.tiktok.com/@joeysplace/')} className="text-2xl xl:text-4xl text-[#f5f0e6] hover:scale-150 transition-transform duration-300 ease-in-out" /></div>
 
           </div>
           <div className="relative w-3/5  mr-12">
             <div className=" h-full p-4 overflow-x-auto overflow-y-hidden">
               <div className="flex flex-row gap-4 items-center justify-start snap-x snap-mandatory scroll-smooth">
-                <EventCard className="shrink-0 snap-start hover:scale-105 transition-transform duration-300 ease-in-out" />
-                <EventCard className="shrink-0 snap-start hover:scale-105 transition-transform duration-300 ease-in-out" />
-                <EventCard className="shrink-0 snap-start hover:scale-105 transition-transform duration-300 ease-in-out" />
-                <EventCard className="shrink-0 snap-start hover:scale-105 transition-transform duration-300 ease-in-out" />
+                <EventCard className="shrink-0 snap-start" />
+                <EventCard className="shrink-0 snap-start " />
+                <EventCard className="shrink-0 snap-start " />
+                <EventCard className="shrink-0 snap-start" />
               </div>
             </div>
 
@@ -29,5 +54,64 @@ export default function EventsNew() {
           </div>
 
         </div>
-  )
+        
+    )}
+    {
+      !isLarge && (
+        <div
+          className="flex flex-col justify-start items-center relative py-10"
+          style={{
+            backgroundImage: `url(${bar_drinks})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 pointer-events-none z-0"></div>
+
+          {/* Top text/socials */}
+          <div className="relative flex flex-col items-center justify-center text-center px-6 z-10">
+            <h2 className="text-4xl font-bold font-cormorant-garamond text-[#f5f0e6]">
+              Events
+            </h2>
+            <p className="text-lg mt-4 font-raleway text-[#f5f0e6]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            </p>
+            <p className="text-sm mt-3 font-raleway text-[#f5f0e6]">
+              Follow Our Socials to stay updated
+            </p>
+            <div className="flex flex-row gap-6 mt-4">
+              <FaInstagram
+                onClick={() => window.open('https://www.instagram.com/joeysplace/')}
+                className="text-2xl text-[#f5f0e6] hover:scale-125 transition-transform duration-300 ease-in-out cursor-pointer"
+              />
+              <FaFacebook
+                onClick={() => window.open('https://www.facebook.com/joeysplace/')}
+                className="text-2xl text-[#f5f0e6] hover:scale-125 transition-transform duration-300 ease-in-out cursor-pointer"
+              />
+              <FaTiktok
+                onClick={() => window.open('https://www.tiktok.com/@joeysplace/')}
+                className="text-2xl text-[#f5f0e6] hover:scale-125 transition-transform duration-300 ease-in-out cursor-pointer"
+              />
+            </div>
+          </div>
+
+          {/* Bottom event cards */}
+          <div className="relative w-full mt-8 z-10">
+            <div className="p-4 overflow-x-auto overflow-y-hidden">
+              <div className="flex flex-row gap-4 items-center justify-start snap-x snap-mandatory scroll-smooth">
+                <SmallEventCard className="shrink-0 snap-start " />
+                <SmallEventCard className="shrink-0 snap-start " />
+                <SmallEventCard className="shrink-0 snap-start " />
+                <SmallEventCard className="shrink-0 snap-start" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+    
+    </>
+    )
 }
+
