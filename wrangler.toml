@@ -1,0 +1,6 @@
+name = "joeys-new"
+main = "dist/_worker.js"
+compatibility_date = "2023-11-01"
+
+[site]
+bucket = "./dist"
