@@ -9,6 +9,7 @@ import EventsNew from './EventsNew'
 import ViewMenus from './ViewMenus'
 import Contents from './Contents'
 import Joeys from './Joeys'
+import HowWeGiveBack from './HowWeGiveBack'
 function App() {
 
   return (
@@ -20,14 +21,18 @@ function App() {
        
         <HeaderNew />
         <ViewMenus />
-        <LeftImageDiv />
         <Contents />
-        <div className=''>
-        <EventsNew /> 
-        </div>     
-        <RightImageDiv />     
-        <Joeys />
+        <LeftImageDiv />
         
+        <div id='reservations'>
+        <EventsNew /> 
+           
+        <RightImageDiv /> 
+        </div>  
+        <section id='about'>
+        <Joeys />
+        <HowWeGiveBack />
+        </section>    
         <Footer />
        
       </div>

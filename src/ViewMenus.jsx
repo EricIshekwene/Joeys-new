@@ -15,7 +15,7 @@ export default function ViewMenus() {
   }, [images.length]);
 
   return (
-    <div className="relative w-full flex flex-col p-4 justify-center items-center h-80 md:h-100 lg:h-120 xl:h-160 overflow-hidden">
+    <div className="relative w-full flex flex-col p-4 justify-center items-center h-80 md:h-100 lg:h-120 xl:h-160 overflow-hidden" id="menus">
       {images.map((img, index) => (
         <img
           key={index}

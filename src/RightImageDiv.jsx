@@ -21,7 +21,7 @@ export default function RightImageDiv() {
     <>
       {/* Large screen layout */}
       {isLarge && (
-        <div className="bg-[#4b0e1e] flex flex-row justify-between items-center h-150">
+        <div className="bg-[#4b0e1e] flex flex-row justify-between items-center h-150" id="reservations">
           {/* Left text section */}
           <div className="w-2/5 h-full flex flex-col justify-center items-start gap-6 px-10">
             <h2 className="text-4xl font-raleway text-white">
@@ -44,7 +44,7 @@ export default function RightImageDiv() {
 
       {/* Small screen layout */}
       {!isLarge && (
-        <div className="bg-[#4b0e1e] flex flex-col justify-start items-center">
+        <div className="bg-[#4b0e1e] flex flex-col justify-start items-center" id="reservations">
           {/* Top text section */}
           <div className="w-full flex flex-col justify-center items-center gap-4 p-6 text-center">
             <h2 className="text-2xl font-raleway text-white">

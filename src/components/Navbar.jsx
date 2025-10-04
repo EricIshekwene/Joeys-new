@@ -32,7 +32,7 @@ const Navbar = () => {
       ]
     },
     {
-      label: "Menu", 
+      label: "Menu",
       bgColor: "#170D27",
       textColor: "#fff",
       links: [
@@ -42,7 +42,7 @@ const Navbar = () => {
     },
     {
       label: "Contact",
-      bgColor: "#271E37", 
+      bgColor: "#271E37",
       textColor: "#fff",
       links: [
         { label: "Email", ariaLabel: "Email us" },
@@ -61,9 +61,9 @@ const Navbar = () => {
             <div className="flex flex-col gap-4 items-start justify-start w-full h-full">
               <div className="flex justify-between w-full items-center p-3">
                 <div className="flex gap-7 flex-row items-start justify-start w-1/3">
-                  <button className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">About Us</button>
-                  <button className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Amenities</button>
-                  <button className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Reservations</button>
+                  <a  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">About Us</a>
+                  <a  onClick={() => document.getElementById('menus').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Menus</a>
+                  <a  onClick={() => document.getElementById('reservations').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Reservations</a>
                 </div>
                 <div className="flex flex-col items-center justify-center w-1/3  hover:scale-110 transition-transform duration-300 ease-in-out">
                   <img src={logo} alt="logo" className="w-1/5  hover:scale-110 transition-transform duration-300 ease-in-out h-full" />
@@ -92,13 +92,13 @@ const Navbar = () => {
         <div className="w-full h-130 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${Joey_outside})` }}>
           <div className="w-full h-full bg-black/50  flex items-start justify-center">
             <div className="flex flex-col items-start  w-full h-full">
-              <div className="flex justify-between w-full items-center pl-3 pr-3">
+              <div className="flex justify-evenly w-full items-center pl-3 pr-3">
                 <NavbarDropdown />
                 <div
                   className="flex flex-shrink gap-4 flex-row items-start justify-start aspect-[11/10] h-20"
                   style={{ width: 'auto' }}
                 >
-                  <img src={logo} alt="logo" className="w-full  hover:scale-110 transition-transform duration-300 ease-in-out h-full" />
+                  <img src={logo} alt="logo" className=" h-3/5 object-contain self-center ml-8" />
                 </div>
               </div>
 

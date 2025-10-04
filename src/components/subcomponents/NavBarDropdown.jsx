@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 export default function NavBarDropdown() {
     const [open, setOpen] = useState(false);
 
-    const menuItems = ["About", "Amenities", "Reservations"];
+    const menuItems = ["About", "Menus", "Reservations"];
   
     return (
       <div className="relative flex items-center">
@@ -26,6 +26,15 @@ export default function NavBarDropdown() {
               `}
               style={{
                 transitionDelay: `${open ? index * 150 : 0}ms`, // stagger each item
+              }}
+              onClick={() => {
+                if (item === "About") {
+                  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                } else if (item === "Menus") {
+                  document.getElementById('menus').scrollIntoView({ behavior: 'smooth' });
+                } else if (item === "Reservations") {
+                  document.getElementById('reservations').scrollIntoView({ behavior: 'smooth' });
+                }
               }}
             >
               {item}

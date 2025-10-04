@@ -36,7 +36,7 @@ export default function Contents() {
                     bg: dj_board,
                     icon: fun_icon,
                     title: "Live DJs",
-                    sub: "Music Every Night"
+                    sub: "Enjoy the music"
                 }
             ].map((item, idx) => (
                 <div
