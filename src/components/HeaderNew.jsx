@@ -17,7 +17,7 @@ export default function HeaderNew() {
   return (
     <>
       {isLarge &&
-        <section>
+       
 
           <div className="p-10 flex flex-col items-center justify-start m-10">
 
@@ -34,10 +34,10 @@ export default function HeaderNew() {
               </div>
             </div>
           </div>         
-        </section >}
+        }
 {
   !isLarge &&
-  <section>
+  <section className='bg-[#f5f0e6]'>
     
 
     <div className="p-10 flex flex-col items-center justify-start">
