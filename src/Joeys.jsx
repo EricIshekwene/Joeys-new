@@ -57,7 +57,7 @@ export default function Joeys({ joey_subtext }) {
                                 className="w-2/3 h-auto object-contain"
                             />
                             <p className="text-white text-xs sm:text-sm font-raleway leading-relaxed px-2">
-                                lorewn ipsum dolor sit hbri jifdnv iudbfbvni iufdvnu oiedhi odnvc inevrdorf oiindvf oiednv dpjvt odfnv odefvn odifnv oedfinv odifnvt doivnjh
+                                {joey_subtext}
                             </p>
                         </div>
                     </div>
