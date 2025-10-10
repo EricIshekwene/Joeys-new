@@ -104,7 +104,7 @@ function App() {
   return (
     <>
       <div className=" bg-[#f5f0e6]">
-
+        
         <Navbar phone={data.business_phone} instagram={data.instagram_link} tiktok={data.tiktok_link} facebook={data.facebook_link} />
 
 

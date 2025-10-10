@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import joey1 from './assets/srcimages/joey1.jpg'
+import joey1compressed from './assets/compressed/joey1.jpg'
 import joey2 from './assets/srcimages/joey2.jpg'
+import joey2compressed from './assets/compressed/joey2.jpg'
 import complex_logo from './assets/srcimages/complex_logo.png'
 
 export default function Joeys({ joey_subtext }) {
@@ -22,8 +24,8 @@ export default function Joeys({ joey_subtext }) {
                 <div className='relative flex flex-row justify-center items-center h-120'>
                     {/* Black tint overlay */}
                     <div className="absolute inset-0 bg-black opacity-40 z-10 pointer-events-none"></div>
-                    <img src={joey1} alt="joey1" className='w-2/3 h-full object-cover z-0' />
-                    <img src={joey2} alt="joey2" className='w-1/3 h-full object-cover z-0' />
+                    <img src={joey1compressed} alt="joey1" className='w-2/3 h-full object-cover z-0' />
+                    <img src={joey2compressed} alt="joey2" className='w-1/3 h-full object-cover z-0' />
                     {/* Foreground logo */}
                     <div className="absolute inset-0 flex flex-col  justify-center z-20 items-center gap-4 p-10">
                         <img
@@ -42,8 +44,8 @@ export default function Joeys({ joey_subtext }) {
                     <div className="relative flex flex-col justify-center items-center h-120">
                         {/* Background stacked images */}
                         <div className="absolute inset-0 flex flex-col">
-                            <img src={joey1} alt="joey1" className="w-full h-1/2 object-cover" />
-                            <img src={joey2} alt="joey2" className="w-full h-1/2 object-cover" />
+                            <img src={joey1compressed} alt="joey1" className="w-full h-1/2 object-cover" />
+                            <img src={joey2compressed} alt="joey2" className="w-full h-1/2 object-cover" />
                         </div>
 
                         {/* Black overlay */}

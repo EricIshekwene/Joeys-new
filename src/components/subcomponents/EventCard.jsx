@@ -1,10 +1,10 @@
 import React from 'react';
 import event1 from '../../assets/srcimages/events1.jpg'
 import event2 from '../../assets/srcimages/events2.jpg'
-import triviaImg from '../../assets/srcimages/trivia_night.png'
-import karaokeImg from '../../assets/srcimages/karaoke.png'
-import dragBrunchImg from '../../assets/srcimages/drag_brunch.png'
-import bingoImg from '../../assets/srcimages/bingo.png'
+import triviaImg from '../../assets/compressed/trivia_night.jpg'
+import karaokeImg from '../../assets/compressed/karaoke.jpg'
+import dragBrunchImg from '../../assets/compressed/drag_brunch.jpg'
+import bingoImg from '../../assets/compressed/bingo.jpg'
 import event3 from '../../assets/srcimages/event3.jpg'
 import event4 from '../../assets/srcimages/event4.jpg'
 export default function EventCard({ className = "", event_name, event_subtext, event_time }) {

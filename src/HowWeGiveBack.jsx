@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import giveback1 from './assets/background/DSC07692.jpg'
+import giveback1compressed from './assets/compressed/DSC07692.jpg'
+import giveback2compressed from './assets/compressed/giveback2.jpg'
 import giveback2 from './assets/background/giveback2.jpg'
 
 export default function HowWeGiveBack({ howWeGiveBack_subtext }) {
@@ -24,8 +26,8 @@ export default function HowWeGiveBack({ howWeGiveBack_subtext }) {
           <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
 
           {/* Background split images */}
-          <img src={giveback1} alt="giveback1" className="w-2/3 h-full object-cover z-0" />
-          <img src={giveback2} alt="giveback2" className="w-1/3 h-full object-cover z-0" />
+          <img src={giveback1compressed} alt="giveback1" className="w-2/3 h-full object-cover z-0" />
+          <img src={giveback2compressed} alt="giveback2" className="w-1/3 h-full object-cover z-0" />
 
           {/* Foreground text */}
           <div className="absolute inset-0 flex flex-col justify-center items-center gap-6 px-10 z-20 text-center">
@@ -48,8 +50,8 @@ export default function HowWeGiveBack({ howWeGiveBack_subtext }) {
         <div className="relative flex flex-col justify-center items-center h-120">
           {/* Stacked background images */}
           <div className="absolute inset-0 flex flex-col">
-            <img src={giveback1} alt="giveback1" className="w-full h-1/2 object-cover" />
-            <img src={giveback2} alt="giveback2" className="w-full h-1/2 object-cover" />
+            <img src={giveback1compressed} alt="giveback1" className="w-full h-1/2 object-cover" />
+            <img src={giveback2compressed} alt="giveback2" className="w-full h-1/2 object-cover" />
           </div>
 
           {/* Tint overlay */}
