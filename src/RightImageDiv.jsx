@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import bar1 from './assets/srcimages/bar1.jpg'
+import bar1compressed from './assets/compressed/bar1.jpg'
 import resturaunt from './assets/srcimages/resturaunt.jpg'
+import resturauntcompressed from './assets/compressed/resturaunt.jpg'
 import bourbon from './assets/srcimages/bourbon.jpg'
-import outer from './assets/srcimages/outer.jpg'
+import bourboncompressed from './assets/compressed/bourbon.jpg'
 
+import outer from './assets/srcimages/outer.jpg'
+import outercompressed from './assets/compressed/outer.jpg'
 export default function RightImageDiv() {
   const isLarge = useIsLarge();
   
@@ -68,13 +72,13 @@ export default function RightImageDiv() {
   )
 }
 
-/* ✅ Reusable grid component */
+
 function GridImages() {
   return (
     <div className="grid grid-cols-2 grid-rows-2 w-full h-full">
       {/* Card 1 */}
       <div className="group relative w-full h-full">
-        <img src={bar1} alt="bar1" className="w-full h-full object-cover" />
+        <img src={bar1compressed} alt="bar1" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/0"></div>
         <p className="absolute inset-0 flex items-center justify-center text-white font-cormorant-garamond text-3xl md:text-5xl transition-all duration-300">
           Bar
@@ -83,7 +87,7 @@ function GridImages() {
 
       {/* Card 2 */}
       <div className="group relative w-full h-full">
-        <img src={resturaunt} alt="resturaunt" className="w-full h-full object-cover" />
+        <img src={resturauntcompressed} alt="resturaunt" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/0"></div>
         <p className="absolute inset-0 flex items-center justify-center text-white font-cormorant-garamond text-3xl md:text-5xl transition-all duration-300">
           Restaurant
@@ -92,7 +96,7 @@ function GridImages() {
 
       {/* Card 3 */}
       <div className="group relative w-full h-full">
-        <img src={bourbon} alt="bourbon" className="w-full h-full object-cover" />
+        <img src={bourboncompressed} alt="bourbon" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/0"></div>
         <p className="absolute inset-0 flex items-center justify-center text-white font-cormorant-garamond text-3xl md:text-5xl transition-all duration-300">
           Bourbon Room

@@ -15,8 +15,8 @@ import Papa from "papaparse";
 
 function App() {
   const defaultData = {
-    business_email: "joseph4u200037@yahoo.com",
-    business_phone: "6145061978",
+    business_email: "joeysplace9@gmail.com",
+    business_phone: "6144293524",
     instagram_link: "https://www.instagram.com/joeysplace614/",
     tiktok_link: "https://www.tiktok.com/@meetatjoeys",
     facebook_link: "https://www.facebook.com/JoeysPlace614",

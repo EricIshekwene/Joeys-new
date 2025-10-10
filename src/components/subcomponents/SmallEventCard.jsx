@@ -5,7 +5,7 @@ import event3 from '../../assets/srcimages/event3.jpg'
 import event4 from '../../assets/srcimages/event4.jpg'
 
 export default function SmallEventCard({ className = "", event_name, event_subtext, event_time }) {
-  const images = [event1, event2, event3, event4];
+  const images = [ event3, event4];
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
   return (

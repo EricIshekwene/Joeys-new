@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import bar_background from './assets/background/bar_background.jpg'
+import bar_back from './assets/compressed/bar_background.jpg'
 import bourbon_background from './assets/background/bourbon_background.jpg'
+import bourbon_back from './assets/compressed/bourbon_background.jpg'
 import restaurant_background from './assets/background/restuarant_background.jpg'
+import restaurant_back from './assets/compressed/restuarant_background.jpg'
 import fun_icon from './assets/srcimages/fun_icon.png'
 import football_icon from './assets/srcimages/football_icon.png'
 import dj_board from './assets/srcimages/dj_board.png'
+import dj_b from './assets/compressed/dj_board.jpg'
+
 import wine_glass from './assets/srcimages/wine_glass_white.png'
 import diamond from './assets/srcimages/diamond.png'
 
@@ -29,25 +34,25 @@ export default function Contents() {
                 {/* Reusable Card */}
                 {[
                     {
-                        bg: bar_background,
+                        bg: bar_back,
                         icon: wine_glass,
                         title: "Open Bar",
                         sub: "All the drinks you love"
                     },
                     {
-                        bg: bourbon_background,
+                        bg: bourbon_back,
                         icon: diamond,
                         title: "Bourbon Room",
                         sub: "Reservations Accepted"
                     },
                     {
-                        bg: restaurant_background,
+                        bg: restaurant_back,
                         icon: football_icon,
                         title: "Watch the Game",
                         sub: "Food & Sports Together"
                     },
                     {
-                        bg: dj_board,
+                        bg: dj_b,
                         icon: fun_icon,
                         title: "Live DJs",
                         sub: "Enjoy the music"

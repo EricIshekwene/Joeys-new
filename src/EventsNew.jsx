@@ -43,10 +43,15 @@ import SmallEventCard from './components/subcomponents/SmallEventCard'
             <div className=" h-full p-4 overflow-x-auto overflow-y-hidden">
               <div className="flex flex-row gap-4 items-center justify-start snap-x snap-mandatory scroll-smooth">
                 {event_1 == "TRUE" && <EventCard className="shrink-0 snap-start" event_name={event_1_name_date} event_subtext={event_1_subtext} event_time={event_1_time} />}
-                  {event_2 == "TRUE" && <EventCard className="shrink-0 snap-start" event_name={event_2_name_date} event_subtext={event_2_subtext} event_time={event_2_time} />}
+                {event_2 == "TRUE" && <EventCard className="shrink-0 snap-start" event_name={event_2_name_date} event_subtext={event_2_subtext} event_time={event_2_time} />}
                 {event_3 == "TRUE" && <EventCard className="shrink-0 snap-start" event_name={event_3_name_date} event_subtext={event_3_subtext} event_time={event_3_time} />}
                 {event_4 == "TRUE" && <EventCard className="shrink-0 snap-start" event_name={event_4_name_date} event_subtext={event_4_subtext} event_time={event_4_time} />}
-              </div>
+                <EventCard className="shrink-0 snap-start" event_name="Drag Brunch" event_subtext="Join us for a night of drag brunch!" event_time="7:00 PM - 9:00 PM" />
+                <EventCard className="shrink-0 snap-start" event_name="Trivia Night" event_subtext="Join us for a night of trivia!" event_time="7:00 PM - 9:00 PM" />
+                <EventCard className="shrink-0 snap-start" event_name="Karaoke Night" event_subtext="Join us for a night of karaoke!" event_time="7:00 PM - 9:00 PM" />
+                <EventCard className="shrink-0 snap-start" event_name="Bingo Night" event_subtext="Join us for a night of bingo!" event_time="7:00 PM - 9:00 PM" />
+                
+                 </div>
             </div>
 
 

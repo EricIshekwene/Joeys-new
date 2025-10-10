@@ -3,7 +3,7 @@ import bar_drinks from './assets/background/bar_drinks.jpg'
 import open_live_hours from './assets/srcimages/open_live_hours.png'
 import close_live_hours from './assets/srcimages/close_live_hours.png'
 import outside1 from './assets/srcimages/outside1.jpg'
-
+import outside1compressed from './assets/compressed/outside1.jpg'
 export default function LeftImageDiv({
   monday_times, tuesday_times, wednesday_times,
   thursday_times, friday_times, saturday_times, sunday_times
@@ -88,7 +88,7 @@ export default function LeftImageDiv({
       {isLarge && (
         <div className="bg-[#f5f0e6] flex flex-row h-150">
          
-          <img src={outside1} alt="background" className="w-3/5 h-full object-cover" />
+          <img src={outside1compressed} alt="background" className="w-3/5 h-full object-cover" />
 
        
           <div className="w-2/5 bg-[#f5f0e6] h-full flex flex-col justify-between items-center p-6">

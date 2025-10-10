@@ -6,7 +6,7 @@ import logo from '../assets/srcimages/Joey_White_Logo.png'
 import NavbarDropdown from './subcomponents/NavBarDropdown'
 import text_logo from '../assets/logo/text_logo.png'
 import Joey_outside from '../assets/background/joey_outside.jpg'
-
+import Joey_background from '../assets/compressed/joey_outside.jpg'
 const Navbar = ({ phone, instagram, tiktok, facebook }) => {
   const isLarge = useIsLarge();
 
@@ -31,7 +31,7 @@ const Navbar = ({ phone, instagram, tiktok, facebook }) => {
   return (
     <>
       {isLarge && (
-        <div className="w-full h-260 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${Joey_outside})` }}>
+        <div className="w-full h-260 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${Joey_background})` }}>
           <div className="w-full h-full bg-black/50 p-6 flex items-start justify-center">
             <div className="flex flex-col gap-4 items-start justify-start w-full h-full">
               <div className="flex justify-between w-full items-center p-3">
@@ -64,7 +64,7 @@ const Navbar = ({ phone, instagram, tiktok, facebook }) => {
       )}
 
       {!isLarge && (
-        <div className="w-full h-130 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${Joey_outside})` }}>
+        <div className="w-full h-130 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${Joey_background})` }}>
           <div className="w-full h-full bg-black/50  flex items-start justify-center">
             <div className="flex flex-col items-start  w-full h-full">
               <div className="flex justify-evenly w-full items-center pl-3 pr-3">
