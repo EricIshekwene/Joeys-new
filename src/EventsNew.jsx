@@ -5,7 +5,7 @@ import EventCard from './components/subcomponents/EventCard'
 import bar_drinks from './assets/background/bar_drinks.jpg'
 import bar_drinks_compressed from './assets/compressed/bar_drinks.jpg'
 import SmallEventCard from './components/subcomponents/SmallEventCard'
-  export default function EventsNew({ Events, events_h1, events_text, event_1, event_1_name_date, event_1_subtext, event_1_time, event_2, event_2_name_date, event_2_subtext, event_2_time, event_3, event_3_name_date, event_3_subtext, event_3_time, event_4, event_4_name_date, event_4_subtext, event_4_time, instagram, facebook, tiktok, event_trivia, event_trivia_description, event_trivia_time, event_drag_brunch, event_drag_brunch_description, event_drag_brunch_time, event_karaoke, event_karaoke_description, event_karaoke_time, event_bingo, event_bingo_description, event_bingo_time, event_draft, event_draft_description, event_draft_time, event_wings, event_wings_description, event_wings_time }) {
+  export default function EventsNew({ Events, events_h1, events_text, event_1, event_1_name_date, event_1_subtext, event_1_time, event_2, event_2_name_date, event_2_subtext, event_2_time, event_3, event_3_name_date, event_3_subtext, event_3_time, event_4, event_4_name_date, event_4_subtext, event_4_time, instagram, facebook, tiktok, event_trivia, event_trivia_description, event_trivia_time, event_drag_brunch, event_drag_brunch_description, event_drag_brunch_time, event_karaoke, event_karaoke_description, event_karaoke_time, event_bingo, event_bingo_description, event_bingo_time, event_draft, event_draft_description, event_draft_time, event_wings, event_wings_description, event_wings_time, event_pizza, event_pizza_description, event_pizza_time }) {
   const isLarge = useIsLarge();
   function useIsLarge() {
     const [isLarge, setIsLarge] = useState(window.innerWidth >= 1000);
@@ -53,6 +53,7 @@ import SmallEventCard from './components/subcomponents/SmallEventCard'
                 {event_bingo == "TRUE" && <EventCard className="shrink-0 snap-start" event_name="Bingo Night" event_subtext={event_bingo_description} event_time={event_bingo_time}  />}
                 {event_draft == "TRUE" && <EventCard className="shrink-0 snap-start" event_name="Draft Night" event_subtext={event_draft_description} event_time={event_draft_time} />}
                 {event_wings == "TRUE" && <EventCard className="shrink-0 snap-start" event_name="Wings Night" event_subtext={event_wings_description} event_time={event_wings_time} />}
+                {event_pizza == "TRUE" && <EventCard className="shrink-0 snap-start" event_name="Pizza Night & Long Islands" event_subtext={event_pizza_description} event_time={event_pizza_time} />}
                  </div>
             </div>
 
@@ -117,6 +118,7 @@ import SmallEventCard from './components/subcomponents/SmallEventCard'
                   {event_bingo == "TRUE" && <SmallEventCard className="shrink-0 snap-start" event_name="Bingo Night" event_subtext={event_bingo_description} event_time={event_bingo_time} />}
                   {event_draft == "TRUE" && <SmallEventCard className="shrink-0 snap-start" event_name="Draft Night" event_subtext={event_draft_description} event_time={event_draft_time} />}
                   {event_wings == "TRUE" && <SmallEventCard className="shrink-0 snap-start" event_name="Wings Night" event_subtext={event_wings_description} event_time={event_wings_time} />}
+                  {event_pizza == "TRUE" && <SmallEventCard className="shrink-0 snap-start" event_name="Pizza Night & Long Islands" event_subtext={event_pizza_description} event_time={event_pizza_time} />}
                 </div>
               </div>
             </div>

@@ -79,12 +79,18 @@ function App() {
     event_bingo_time: "Every Tuesday @ 7:00PM-10:00PM",
 
     event_draft : "FALSE",
-    event_draft_description: "With a purchase of your own joey's place mug you can get $2 wings",
+    event_draft_description: "With a purchase of your own joey's place mug you can get $2 draft beers and build your own burger at $5",
     event_draft_time: "Every Tuesday",
     
     event_wings : "FALSE",
     event_wings_description: "$1 wing night",
     event_wings_time: "Every Wednesday",
+
+    
+
+    event_pizza: "FALSE",
+    event_pizza_description: "Build your own pizza and Long Islands",
+    event_pizza_time: "Every Thursday",
   };
   const [data, setData] = useState(defaultData);
 
@@ -149,6 +155,7 @@ function App() {
           event_bingo={data.event_bingo} event_bingo_description={data.event_bingo_description} event_bingo_time={data.event_bingo_time}    
           event_draft={data.event_draft} event_draft_description={data.event_draft_description} event_draft_time={data.event_draft_time} 
           event_wings={data.event_wings} event_wings_description={data.event_wings_description} event_wings_time={data.event_wings_time} 
+          event_pizza={data.event_pizza} event_pizza_description={data.event_pizza_description} event_pizza_time={data.event_pizza_time} 
           />
           <RightImageDiv />
         </div>

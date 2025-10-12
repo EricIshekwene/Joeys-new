@@ -9,6 +9,7 @@ import karaokeImg from '../../assets/compressed/karaoke.jpg'
 import dragBrunchImg from '../../assets/compressed/drag_brunch.jpg'
 import bingoImg from '../../assets/compressed/bingo.jpg'
 import draft_beers from '../../assets/srcimages/draft_beers.png'
+import pizza from '../../assets/srcimages/pizza.png'
 export default function SmallEventCard({ className = "", event_name, event_subtext, event_time }) {
   const images = [ event3, event4];
   const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -18,7 +19,7 @@ export default function SmallEventCard({ className = "", event_name, event_subte
       {/* Image section */}
       <div className="relative h-28 bg-[#f5f0e6]">
         <img
-          src={event_name === "Trivia Night" ? triviaImg : event_name === "Karaoke Night" ? karaokeImg : event_name === "Bingo Night" ? bingoImg : event_name === "Drag Brunch" ? dragBrunchImg : event_name === "Draft Night" ? draft_beers : event_name === "Wings Night" ? wings : randomImage}
+          src={event_name === "Trivia Night" ? triviaImg : event_name === "Karaoke Night" ? karaokeImg : event_name === "Bingo Night" ? bingoImg : event_name === "Drag Brunch" ? dragBrunchImg : event_name === "Draft Night" ? draft_beers : event_name === "Wings Night" ? wings : event_name === "Pizza Night & Long Islands" ? pizza : randomImage}
           alt="card-image"
           className="w-full h-full object-cover"
         />
