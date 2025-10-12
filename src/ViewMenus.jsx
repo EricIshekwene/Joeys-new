@@ -1,5 +1,5 @@
 import React from 'react'
-import food1 from './assets/background/DSC_0549.jpg'
+import menus from './assets/menus/menus.pdf'
 import food1compressed from './assets/compressed/DSC_0549.jpg'
 export default function ViewMenus({ menus_h1, menu_pdf }) {
   return (
@@ -16,7 +16,7 @@ export default function ViewMenus({ menus_h1, menu_pdf }) {
         <p className="text-2xl lg:text-4xl md:text-3xl sm:text-2xl xl:text-6xl font-raleway font-bold text-center text-white mb-4">
           {menus_h1}
         </p>
-        <button className="border-2 border-white text-white font-raleway font-bold py-2 px-4 mt-4 rounded-full hover:bg-white hover:text-[#4b0e1e] transition-all duration-300 ease-in-out">
+        <button className="border-2 border-white text-white font-raleway font-bold py-2 px-4 mt-4 rounded-full hover:bg-white hover:text-[#4b0e1e] transition-all duration-300 ease-in-out" onClick={() => window.open(menus, '_blank')}>
           View Menus
         </button>
       </div>
