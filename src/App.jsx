@@ -61,7 +61,30 @@ function App() {
 
     joey_subtext: "",
     howWeGiveBack_subtext: "Every month, a portion of our proceeds supports initiatives that uplift and empower our neighbors.",
+
+    event_trivia: "FALSE",
+    event_trivia_description: "Join us for a night of trivia! We'll have a variety of trivia questions for you to answer.",
+    event_trivia_time: "Every Tuesday @ 7:00PM-10:00PM",
+
+    event_drag_brunch: "FALSE",
+    event_drag_brunch_description: "Join us for a afternoon of drag brunch! We'll have a variety of drag queens and kings for you to enjoy.",
+    event_drag_brunch_time: "Every Other Sunday @12:00PM-3:00PM",
+
+    event_karaoke: "FALSE",
+    event_karaoke_description: "Join us for a night of karaoke! Get your favorite songs ready and sing your heart out!",
+    event_karaoke_time: "Every Thursday @ 7:00PM-10:00PM",
+
+    event_bingo: "FALSE",
+    event_bingo_description: "Join us for a night of bingo! We'll have a variety of prizes for the winners.",
+    event_bingo_time: "Every Tuesday @ 7:00PM-10:00PM",
+
+    event_draft : "FALSE",
+    event_draft_description: "With a purchase of your own joey's place mug you can get $2 wings",
+    event_draft_time: "Every Tuesday",
     
+    event_wings : "FALSE",
+    event_wings_description: "$1 wing night",
+    event_wings_time: "Every Wednesday",
   };
   const [data, setData] = useState(defaultData);
 
@@ -114,8 +137,19 @@ function App() {
         <LeftImageDiv monday_times={data.monday_times} tuesday_times={data.tuesday_times} wednesday_times={data.wednesday_times} thursday_times={data.thursday_times} friday_times={data.friday_times} saturday_times={data.saturday_times} sunday_times={data.sunday_times} />
 
         <div id='reservations'>
-          <EventsNew Events={data.Events} events_h1={data.events_h1} events_text={data.events_text} event_1={data.event_1} event_1_name_date={data.event_1_name_date} event_1_subtext={data.event_1_subtext} event_1_time={data.event_1_time} event_2={data.event_2} event_2_name_date={data.event_2_name_date} event_2_subtext={data.event_2_subtext} event_2_time={data.event_2_time} event_3={data.event_3} event_3_name_date={data.event_3_name_date} event_3_subtext={data.event_3_subtext} event_3_time={data.event_3_time} event_4={data.event_4} event_4_name_date={data.event_4_name_date} event_4_subtext={data.event_4_subtext} event_4_time={data.event_4_time} instagram={data.instagram_link} facebook={data.facebook_link} tiktok={data.tiktok_link}     />
-
+          <EventsNew Events={data.Events} events_h1={data.events_h1} events_text={data.events_text} 
+          event_1={data.event_1} event_1_name_date={data.event_1_name_date} event_1_subtext={data.event_1_subtext} event_1_time={data.event_1_time} 
+          event_2={data.event_2} event_2_name_date={data.event_2_name_date} event_2_subtext={data.event_2_subtext} event_2_time={data.event_2_time} 
+          event_3={data.event_3} event_3_name_date={data.event_3_name_date} event_3_subtext={data.event_3_subtext} event_3_time={data.event_3_time} 
+          event_4={data.event_4} event_4_name_date={data.event_4_name_date} event_4_subtext={data.event_4_subtext} event_4_time={data.event_4_time} 
+          instagram={data.instagram_link} facebook={data.facebook_link} tiktok={data.tiktok_link} 
+          event_trivia={data.event_trivia} event_trivia_description={data.event_trivia_description} event_trivia_time={data.event_trivia_time} 
+          event_drag_brunch={data.event_drag_brunch} event_drag_brunch_description={data.event_drag_brunch_description} event_drag_brunch_time={data.event_drag_brunch_time} 
+          event_karaoke={data.event_karaoke} event_karaoke_description={data.event_karaoke_description} event_karaoke_time={data.event_karaoke_time} 
+          event_bingo={data.event_bingo} event_bingo_description={data.event_bingo_description} event_bingo_time={data.event_bingo_time}    
+          event_draft={data.event_draft} event_draft_description={data.event_draft_description} event_draft_time={data.event_draft_time} 
+          event_wings={data.event_wings} event_wings_description={data.event_wings_description} event_wings_time={data.event_wings_time} 
+          />
           <RightImageDiv />
         </div>
         <section id='about'>
