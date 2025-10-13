@@ -3,11 +3,13 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
 import logo from '../assets/srcimages/Joey_White_Logo.png'
+import logo_colored from '../assets/compressed/logo_colored.png'
 import NavbarDropdown from './subcomponents/NavBarDropdown'
 import text_logo from '../assets/logo/text_logo.png'
 import Joey_outside from '../assets/background/joey_outside.jpg'
 import Joey_background from '../assets/compressed/joey_outside.jpg'
 import outside1compressed from '../assets/compressed/outside1.jpg'
+import outside2compressed from '../assets/compressed/outside2.jpg'
 const Navbar = ({ phone, instagram, tiktok, facebook }) => {
   const isLarge = useIsLarge();
 
@@ -26,23 +28,26 @@ const Navbar = ({ phone, instagram, tiktok, facebook }) => {
     if (!phone) return ""; // fallback if phone is undefined/null
     return phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
   };
-  
- 
-  
+
+
+
   return (
     <>
       {isLarge && (
-        <div className="w-full h-260 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${outside1compressed})` }}>
+        <div className="w-full h-260 bg-black flex items-start bg-cover bg-center" style={{
+          backgroundImage: `url(${outside2compressed})`,
+          filter: 'brightness(1.4)', 
+        }}>
           <div className="w-full h-full p-6 flex items-start justify-center">
             <div className="flex flex-col gap-4 items-start justify-start w-full h-full">
               <div className="flex justify-between w-full items-center p-3">
                 <div className="flex gap-7 flex-row items-start justify-start w-1/3">
-                  <a  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">About Us</a>
-                  <a  onClick={() => document.getElementById('menus').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Menus</a>
-                  <a  onClick={() => document.getElementById('reservations').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Reservations</a>
+                  <a onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">About Us</a>
+                  <a onClick={() => document.getElementById('menus').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Menus</a>
+                  <a onClick={() => document.getElementById('reservations').scrollIntoView({ behavior: 'smooth' })} className="text-white text-lg font-raleway  hover:scale-110 transition-transform duration-300 ease-in-out">Reservations</a>
                 </div>
                 <div className="flex flex-col items-center justify-center w-1/3  hover:scale-110 transition-transform duration-300 ease-in-out">
-                  <img src={logo} alt="logo" className="w-1/5  hover:scale-110 transition-transform duration-300 ease-in-out h-full" />
+                  <img src={logo_colored} alt="logo" className="w-1/5  hover:scale-110 transition-transform duration-300 ease-in-out h-full" style={{ filter: 'brightness(0.7)' }} />
                 </div>
                 <div className="flex gap-4 flex-row items-end justify-end w-1/3">
                   <FaInstagram onClick={() => window.open(instagram, '_blank')} className="text-white text-2xl font-bold  hover:scale-110 transition-transform duration-300 ease-in-out" />
@@ -65,7 +70,7 @@ const Navbar = ({ phone, instagram, tiktok, facebook }) => {
       )}
 
       {!isLarge && (
-        <div className="w-full h-130 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${outside1compressed})` }}>
+        <div className="w-full h-130 bg-black flex items-start bg-cover bg-center" style={{ backgroundImage: `url(${outside2compressed})` , filter: 'brightness(1.4)' }}>
           <div className="w-full h-full   flex items-start justify-center">
             <div className="flex flex-col items-start  w-full h-full">
               <div className="flex justify-evenly w-full items-center pl-3 pr-3">
@@ -74,7 +79,7 @@ const Navbar = ({ phone, instagram, tiktok, facebook }) => {
                   className="flex flex-shrink gap-4 flex-row items-start justify-start aspect-[11/10] h-20"
                   style={{ width: 'auto' }}
                 >
-                  <img src={logo} alt="logo" className=" h-3/5 object-contain self-center ml-8" />
+                  <img src={logo_colored} alt="logo" className=" h-3/5 object-contain self-center ml-8" style={{ filter: 'brightness(0.7)' }} />
                 </div>
               </div>
 
