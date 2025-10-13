@@ -87,25 +87,25 @@ export default function Contents() {
             <div className="grid grid-cols-2 grid-rows-2 h-120 w-full bg-gray-300 justify-center items-center">
                 {[
                     {
-                        bg: bar_background,
+                        bg: bar_back,
                         icon: wine_glass,
                         title: "Open Bar",
                         sub: "All the drinks you love"
                     },
                     {
-                        bg: bourbon_background,
+                        bg: bourbon_back,
                         icon: diamond,
                         title: "Bourbon Room",
                         sub: "Reservations Accepted"
                     },
                     {
-                        bg: restaurant_background,
+                        bg: restaurant_back,
                         icon: football_icon,
                         title: "Watch the Game",
                         sub: "Food & Sports Together"
                     },
                     {
-                        bg: dj_board,
+                        bg: dj_b,
                         icon: fun_icon,
                         title: "Live DJs",
                         sub: "Enjoy the music"
