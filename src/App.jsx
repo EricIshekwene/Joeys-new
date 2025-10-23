@@ -12,6 +12,7 @@ import Joeys from './Joeys'
 import HowWeGiveBack from './HowWeGiveBack'
 import { useState, useEffect } from 'react';
 import Papa from "papaparse";
+import menus from './assets/menus/menus.pdf'
 
 function App() {
   const defaultData = {
@@ -25,7 +26,7 @@ function App() {
     header_text: "Authenticity, Community, Excellence, and Vibes Only. Making a place for everyone to feel at home and to feel like family.",
 
     menus_h1: "East and Drink to your heart's content",
-    menu_pdf: "",
+    menu_pdf: menus,
 
     Times: "eg 10:00AM-10:00PM",
     monday_times: "Closed",
