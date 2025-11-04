@@ -8,7 +8,7 @@ import bourboncompressed from './assets/compressed/bourbon.jpg'
 
 import outer from './assets/srcimages/outer.jpg'
 import outercompressed from './assets/compressed/outer.jpg'
-export default function RightImageDiv() {
+export default function RightImageDiv({phone}) {
   const isLarge = useIsLarge();
   
   function useIsLarge() {
@@ -36,7 +36,7 @@ export default function RightImageDiv() {
             <button className="px-6 py-3 text-[#f5f0e6] border-2 border-[#f5f0e6] rounded-full text-lg font-raleway uppercase tracking-wide hover:bg-[#f5f0e6] hover:text-[#4b0e1e] transition">
               Call Us to Inquire
             </button>
-            <p className="text-lg font-raleway text-white">(614) 123-4567</p>
+            <p className="text-lg font-raleway text-white">{phone}</p>
           </div>
 
           {/* Right image grid */}
@@ -59,7 +59,7 @@ export default function RightImageDiv() {
             <button className="px-4 py-2 text-[#f5f0e6] border-2 border-[#f5f0e6] rounded-full text-sm font-raleway uppercase tracking-wide hover:bg-[#f5f0e6] hover:text-[#4b0e1e] transition">
               Call Us to Inquire
             </button>
-            <p className="text-md font-raleway text-white">(614) 123-4567</p>
+            <p className="text-md font-raleway text-white">{phone}</p>
           </div>
 
           {/* Bottom image grid */}

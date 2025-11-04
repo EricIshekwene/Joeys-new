@@ -158,7 +158,7 @@ function App() {
           event_wings={data.event_wings} event_wings_description={data.event_wings_description} event_wings_time={data.event_wings_time} 
           event_pizza={data.event_pizza} event_pizza_description={data.event_pizza_description} event_pizza_time={data.event_pizza_time} 
           />
-          <RightImageDiv />
+          <RightImageDiv phone={data.business_phone}/>
         </div>
         <section id='about'>
           <Joeys joey_subtext={data.joey_subtext} />
